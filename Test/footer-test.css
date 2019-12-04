@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: lato, sans-serif; }
+  * .wrapper {
+    width: 100%;
+    max-width: 1200px;
+    min-width: 300px;
+    margin: auto; }
+
+footer {
+  background: #4a0072;
+  color: white; }
+  footer div {
+    padding: 10px; }
+    footer div > * {
+      margin-bottom: 10px; }
+    footer div > a {
+      display: block;
+      text-decoration: none;
+      color: white; }
+  footer #copyright {
+    background: black;
+    color: rgba(255, 255, 255, 0.5); }
+    footer #copyright > p {
+      text-align: center; }
+  footer #contact > p > i {
+    margin-right: 20px; }
+
+@media (min-width: 600px) {
+  #footer-content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "contact contact links mission mission"; }
+    #footer-content #contact {
+      grid-area: contact; }
+    #footer-content #links {
+      grid-area: links; }
+    #footer-content #mission {
+      grid-area: mission; }
+  #copyright #details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    #copyright #details > a {
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      text-align: center; } }

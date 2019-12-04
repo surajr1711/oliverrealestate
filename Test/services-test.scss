@@ -1,0 +1,72 @@
+@import 'variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Lato, sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    min-width: 300px;
+    padding: 10px;
+    margin: auto;
+}
+
+#services {
+    padding: $padding-sm;
+    h2 {
+        text-align: center;
+        color: $text-s-dark;
+        margin: $heading-margin-sm auto;
+    }
+    p {
+        max-width: 900px;
+        text-align: center;
+        margin: auto;
+    }
+}
+#services-options {
+    padding: $padding-sm;
+    margin: auto;
+    >div {
+        margin: auto;
+        text-align: center;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $text-s-light;
+        font-size: 50px;
+        margin: $heading-margin-sm;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        transition: 0.3s;
+        &:hover {
+            transform: scale(1.03);
+            filter: brightness(1.2);box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+        }
+    }
+    >div:first-child {
+        background: $p-light url(images/services-design-sm.jpeg) center/cover no-repeat;
+        background-blend-mode: multiply;
+    }
+    >div:nth-child(2) {
+        background: $s-light url(images/services-build-sm.jpeg) center/cover no-repeat;
+        background-blend-mode: multiply;
+    }
+}
+
+// MEDIA QUERIES =====================
+// FOR LAPTOPS/DESKTOPS 900+
+@media (min-width: 900px){
+    // SERVICES
+    #services-options {
+        display: flex;
+        >div {
+            flex-grow: 1;
+        }
+    }
+
+}

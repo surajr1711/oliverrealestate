@@ -1,0 +1,67 @@
+@import 'variables';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: lato, sans-serif;
+    .wrapper {
+        width: 100%;
+        max-width: 1200px;
+        min-width: 300px;
+        margin: auto;
+    }
+}
+
+footer{
+    background: $p-dark;
+    color: $text-p-light;
+    div{
+        padding: 10px;
+        >*{
+            margin-bottom: 10px;
+        }
+        >a{
+            display: block;
+            text-decoration: none;
+            color: $text-p-light;
+        }
+    }
+    #copyright {
+        background: black;
+        color: rgba(255,255,255,0.5);
+        >p {
+            text-align: center;
+        }
+    }
+    #contact{
+        >p>i{ margin-right: 20px;}
+    }
+}
+
+
+// MEDIA QUERIES ==========================================
+// FOR TABLETS/LAPTOPS 600+
+@media (min-width: 600px) {
+    // FOOTER
+    #footer-content{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-areas: 
+        "contact contact links mission mission";
+        #contact{ grid-area: contact; }
+        #links{ grid-area: links; }
+        #mission{ grid-area: mission; }
+    }
+    
+    #copyright{
+        #details{
+            display: flex;
+            >a{
+                flex-grow: 1;
+                text-align: center;
+            }
+        }
+    }
+    
+}
